@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.add-to-cart {
+  @apply flex items-center gap-2 border border-secondary-300 rounded-full bg-secondary-50 px-4 py-2 absolute left-[50%] translate-x-[-50%] translate-y-[-50%];
+}
+
+.item {
+  @apply text-xs text-secondary-500;
+}
+
+.item-name {
+  @apply font-semibold;
+}
+
+.price {
+  @apply text-primary-red font-semibold;
+}
