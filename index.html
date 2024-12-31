@@ -12,6 +12,7 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="tailwindstyle.css" />
+    <script src="index.js" defer></script>
 
     <title>Frontend Mentor | Product list with cart</title>
   </head>
@@ -22,20 +23,49 @@
 
         <div class="">
           <div class="mb-8">
-            <div class="relative mb-6">
+            <div class="mb-4">
               <img
                 src="assets/images/image-waffle-mobile.jpg"
                 alt="Waffle"
-                class="rounded-lg"
+                class="rounded-lg image"
               />
-              <div class="add-to-cart">
-                <span>
-                  <img
-                    src="assets/images/icon-add-to-cart.svg"
-                    alt="add to cart icon"
-                  />
-                </span>
-                <p class="text-sm font-semibold">Add to Cart</p>
+              <div class="relative">
+                <div class="hiddenDiv" onclick="hideTheDiv()">
+                  <div class="add-to-cart z-10">
+                    <span>
+                      <img
+                        src="assets/images/icon-add-to-cart.svg"
+                        alt="add to cart icon"
+                      />
+                    </span>
+                    <p class="text-sm font-semibold">Add to Cart</p>
+                  </div>
+                </div>
+                <div class="showBorder" onclick="showTheBorder()">
+                  <div class="cart-control">
+                    <button onclick="totalClick(-1)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 10 2"
+                        class="item-control"
+                      >
+                        <path d="M0 .375h10v1.25H0V.375Z" />
+                      </svg>
+                    </button>
+                    <span id="totalClicks" class="text-white text-sm">0</span>
+                    <button onclick="totalClick(1)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 10 10"
+                        class="item-control"
+                      >
+                        <path
+                          d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <p class="item">Waffle</p>
@@ -44,7 +74,7 @@
           </div>
 
           <div class="mb-8">
-            <div class="relative mb-6">
+            <div class="mb-6">
               <img
                 src="assets/images/image-creme-brulee-mobile.jpg"
                 alt="Crème brulee"
